@@ -137,6 +137,39 @@
                 android:background="#cccccc"></View>
 
             <LinearLayout
+                android:id="@+id/person_updateemail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20">
+
+                <com.kproduce.roundcorners.RoundImageView
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/email"
+                    app:rRadius="@dimen/dp_500"></com.kproduce.roundcorners.RoundImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:gravity="center|left"
+                    android:text="修改邮箱"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/sp_13"></TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_1"
+                android:layout_marginLeft="@dimen/dp_60"
+                android:layout_marginRight="@dimen/dp_40"
+                android:background="#cccccc"></View>
+
+            <LinearLayout
                 android:id="@+id/person_cancellogin"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_50"

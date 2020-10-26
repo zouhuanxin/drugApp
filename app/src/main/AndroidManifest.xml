@@ -32,6 +32,7 @@
         <activity android:name=".ui.guardianship.QueryGuardianshipActivity"></activity>
         <activity android:name=".ui.person.UpdatePassActivity"></activity>
         <activity android:name=".ui.person.UpdateUsernameActivity"></activity>
+        <activity android:name=".ui.person.UpdateEmailActivity"></activity>
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

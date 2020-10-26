@@ -14,6 +14,7 @@ import com.example.drugapp.http.Apis;
 import com.example.drugapp.http.HttpCallBack;
 import com.example.drugapp.http.HttpUtil;
 import com.example.drugapp.model.bean.Drug;
+import com.example.drugapp.model.bean.UserInfo;
 import com.example.drugapp.ui.base.BaseFragment;
 import com.example.drugapp.util.ShapeUtil;
 import com.example.drugapp.util.ToastUtil;
@@ -106,7 +107,7 @@ public class DrugFragment extends BaseFragment {
      * 请求数据
      */
     private void reqData() {
-        HttpUtil.getInstance().GET(Apis.getAllDrugData+"?account="+ ShapeUtil.INSTANCE.getUser(getContext()).getAccount(), new HttpCallBack() {
+        HttpUtil.getInstance().GET(Apis.getAllDrugData + "?account=" + ShapeUtil.INSTANCE.getUser(getContext()).getAccount(), new HttpCallBack() {
             @Override
             public void Error(Call call, IOException e) {
                 swipe.setRefreshing(false);
@@ -149,8 +150,15 @@ public class DrugFragment extends BaseFragment {
                 drugAdapter.setDrugClick(new DrugAdapter.DrugClick() {
                     @Override
                     public void Add() {
-                        Intent intent = new Intent(getActivity(), AddDrugActivity.class);
-                        startActivity(intent);
+                        UserInfo userInfo = ShapeUtil.INSTANCE.getUser(getContext());
+                        if (userInfo != null) {
+                            if (userInfo.getEmail() != null) {
+                                Intent intent = new Intent(getActivity(), AddDrugActivity.class);
+                                startActivity(intent);
+                            } else {
+                                ToastUtil.toast(getActivity(),"请绑定邮箱");
+                            }
+                        }
                     }
 
                     @Override
@@ -194,7 +202,7 @@ public class DrugFragment extends BaseFragment {
      * 前往修改
      */
     private void UpdateDrug(Drug drug) {
-        Intent intent = new Intent(getActivity(),UpdateDrugActivity.class);
+        Intent intent = new Intent(getActivity(), UpdateDrugActivity.class);
         intent.putExtra("name", drug.getDrugname());
         intent.putExtra("image", drug.getDrugimage());
         intent.putExtra("desc", drug.getDrugdesc());

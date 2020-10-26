@@ -26,6 +26,7 @@ public class PersonFragment extends BaseFragment implements View.OnClickListener
     private RoundImageView adimage;
 
     private Intent intent;
+    private LinearLayout personUpdateemail;
 
     @Override
     protected void init() {
@@ -51,7 +52,9 @@ public class PersonFragment extends BaseFragment implements View.OnClickListener
         personUpdatename = (LinearLayout) view.findViewById(R.id.person_updatename);
         personCancellogin = (LinearLayout) view.findViewById(R.id.person_cancellogin);
         adimage = (RoundImageView) view.findViewById(R.id.adimage);
+        personUpdateemail = (LinearLayout) view.findViewById(R.id.person_updateemail);
 
+        personUpdateemail.setOnClickListener(this);
         personName.setOnClickListener(this);
         personUpdatename.setOnClickListener(this);
         personUpdatepass.setOnClickListener(this);
@@ -74,6 +77,12 @@ public class PersonFragment extends BaseFragment implements View.OnClickListener
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.person_updateemail:
+                if (ShapeUtil.INSTANCE.getUser(getContext()) != null) {
+                    intent = new Intent(getActivity(), UpdateEmailActivity.class);
+                    startActivity(intent);
+                }
+                break;
             case R.id.person_name:
                 if (ShapeUtil.INSTANCE.getUser(getContext()) == null) {
                     intent = new Intent(getActivity(), LoginActivity.class);

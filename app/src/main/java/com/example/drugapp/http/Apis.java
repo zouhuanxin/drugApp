@@ -15,4 +15,5 @@ public class Apis {
     public static final String BybeaccountGruandianships = "/BybeaccountGruandianships";
     public static final String updatePass = "/updatePass";
     public static final String updateUsername = "/updateUsername";
+    public static final String updateEmail = "/updateEmail";
 }

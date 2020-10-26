@@ -4,7 +4,7 @@ public class UserInfo {
     private String username;
     private String password;
     private String account;
-
+    private String email;
 
     public String getUsername() {
         return username;
@@ -30,12 +30,21 @@ public class UserInfo {
         this.account = account;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return "UserInfo{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", account='" + account + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }
