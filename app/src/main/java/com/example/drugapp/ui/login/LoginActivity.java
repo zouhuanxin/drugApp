@@ -105,6 +105,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     userInfo.setAccount(json.getJSONObject("data").getString("account"));
                     userInfo.setPassword(json.getJSONObject("data").getString("password"));
                     userInfo.setUsername(json.getJSONObject("data").getString("username"));
+                    if (json.getJSONObject("data").toString().indexOf("email") != -1){
+                        userInfo.setEmail(json.getJSONObject("data").getString("email"));
+                    }
                     ShapeUtil.INSTANCE.setUser(LoginActivity.this,userInfo);
                     finish();
                 }
