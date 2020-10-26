@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_60"
+    android:layout_gravity="bottom"
+    android:padding="@dimen/dp_5"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/drug"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/drug_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@mipmap/tixing1">
+        </ImageView>
+        <TextView
+            android:id="@+id/drug_text"
+            android:text="药物"
+            android:textSize="@dimen/sp_13"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_20">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/guardianship"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/guardianship_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@mipmap/jianhu1">
+        </ImageView>
+        <TextView
+            android:id="@+id/guardianship_text"
+            android:text="监护"
+            android:textSize="@dimen/sp_13"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_20">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/person"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/person_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@mipmap/geren2">
+        </ImageView>
+        <TextView
+            android:id="@+id/person_text"
+            android:text="个人"
+            android:textSize="@dimen/sp_13"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_20">
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

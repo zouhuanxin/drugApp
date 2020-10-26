@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7">
+
+    <com.kproduce.roundcorners.RoundTextView
+        android:background="@color/purple_500"
+        app:rBottomRadius="@dimen/dp_50"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150">
+    </com.kproduce.roundcorners.RoundTextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            app:cardCornerRadius="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.kproduce.roundcorners.RoundTextView
+                    android:id="@+id/person_image"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:background="#000000"
+                    android:gravity="center"
+                    android:text="姓"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/sp_16"
+                    app:rRadius="@dimen/dp_500"></com.kproduce.roundcorners.RoundTextView>
+
+                <TextView
+                    android:id="@+id/person_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:text="前往登陆"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.kproduce.roundcorners.RoundImageView
+            android:id="@+id/adimage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:scaleType="fitXY"
+            app:rRadius="@dimen/dp_10"></com.kproduce.roundcorners.RoundImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/person_updatepass"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20">
+
+                <com.kproduce.roundcorners.RoundImageView
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/updatepass"
+                    app:rRadius="@dimen/dp_500"></com.kproduce.roundcorners.RoundImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:gravity="center|left"
+                    android:text="修改密码"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/sp_13"></TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_1"
+                android:layout_marginLeft="@dimen/dp_60"
+                android:layout_marginRight="@dimen/dp_40"
+                android:background="#cccccc"></View>
+
+            <LinearLayout
+                android:id="@+id/person_updatename"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20">
+
+                <com.kproduce.roundcorners.RoundImageView
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/updateusername"
+                    app:rRadius="@dimen/dp_500"></com.kproduce.roundcorners.RoundImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:gravity="center|left"
+                    android:text="修改用户名"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/sp_13"></TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_1"
+                android:layout_marginLeft="@dimen/dp_60"
+                android:layout_marginRight="@dimen/dp_40"
+                android:background="#cccccc"></View>
+
+            <LinearLayout
+                android:id="@+id/person_cancellogin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20">
+
+                <com.kproduce.roundcorners.RoundImageView
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/cancellogin"
+                    app:rRadius="@dimen/dp_500"></com.kproduce.roundcorners.RoundImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:gravity="center|left"
+                    android:text="退出登陆"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/sp_13"></TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_1"
+                android:layout_marginLeft="@dimen/dp_60"
+                android:layout_marginRight="@dimen/dp_40"
+                android:background="#cccccc"></View>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
