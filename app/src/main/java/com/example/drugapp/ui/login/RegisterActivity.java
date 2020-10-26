@@ -119,10 +119,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
             @Override
             public void Success(Call call, String res) throws Exception {
-                if (new JSONObject(res).getString("msg").equals("ok")) {
+                JSONObject rep = new JSONObject(res);
+                ToastUtil.toast(RegisterActivity.this, res);
+                if (rep.getString("msg").equals("ok")) {
                     register();
-                } else {
-                    ToastUtil.toast(RegisterActivity.this, res);
                 }
             }
         });
@@ -148,10 +148,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
             @Override
             public void Success(Call call, String res) throws Exception {
-                if (new JSONObject(res).getInt("code") == 200) {
+                JSONObject rep = new JSONObject(res);
+                ToastUtil.toast(RegisterActivity.this, rep.getString("msg"));
+                if (rep.getInt("code") == 200) {
                     finish();
-                } else {
-                    ToastUtil.toast(RegisterActivity.this, "错误");
                 }
             }
         });
