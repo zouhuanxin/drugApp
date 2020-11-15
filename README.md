@@ -7,3 +7,5 @@
 
 对应android端链接：
 https://github.com/zouhuanxin/drug
+
+- 邮箱：634448817@qq.com
