@@ -43,6 +43,7 @@ import okhttp3.Call;
 import top.zibin.luban.Luban;
 import top.zibin.luban.OnCompressListener;
 
+@Deprecated
 public class AddDrugActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView headFinish;

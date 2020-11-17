@@ -153,7 +153,7 @@ public class DrugFragment extends BaseFragment {
                         UserInfo userInfo = ShapeUtil.INSTANCE.getUser(getContext());
                         if (userInfo != null) {
                             if (userInfo.getEmail() != null) {
-                                Intent intent = new Intent(getActivity(), AddDrugActivity.class);
+                                Intent intent = new Intent(getActivity(), AddDrugActivity2.class);
                                 startActivity(intent);
                             } else {
                                 ToastUtil.toast(getActivity(),"请绑定邮箱");
@@ -202,7 +202,7 @@ public class DrugFragment extends BaseFragment {
      * 前往修改
      */
     private void UpdateDrug(Drug drug) {
-        Intent intent = new Intent(getActivity(), UpdateDrugActivity.class);
+        Intent intent = new Intent(getActivity(), UpdateDrugActivity2.class);
         intent.putExtra("name", drug.getDrugname());
         intent.putExtra("image", drug.getDrugimage());
         intent.putExtra("desc", drug.getDrugdesc());

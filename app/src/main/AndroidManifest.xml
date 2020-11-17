@@ -40,6 +40,8 @@
         <activity android:name=".ui.durglist.UpdateDruglist1Activity" />
         <activity android:name=".ui.durglist.AddDruglistDetailsActivity" />
         <activity android:name=".ui.durglist.UpdateDruglistDetailsActivity" />
+        <activity android:name=".ui.drug.AddDrugActivity2" />
+        <activity android:name=".ui.drug.UpdateDrugActivity2" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
