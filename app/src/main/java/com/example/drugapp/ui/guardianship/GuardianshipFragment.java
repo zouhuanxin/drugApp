@@ -125,6 +125,13 @@ public class GuardianshipFragment extends BaseFragment implements View.OnClickLi
                     }
 
                     @Override
+                    public void Query2(UserInfo userInfo) {
+                        Intent intent = new Intent(getActivity(), QueryDruglistActivity.class);
+                        intent.putExtra("account",userInfo.getAccount());
+                        startActivity(intent);
+                    }
+
+                    @Override
                     public void CallPhone(UserInfo userInfo) {
                         openCallPhone(userInfo.getAccount());
                     }

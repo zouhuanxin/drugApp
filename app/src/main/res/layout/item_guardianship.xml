@@ -39,7 +39,18 @@
                 android:background="#4678ff"
                 android:clickable="true"
                 android:gravity="center"
-                android:text="查看"
+                android:text="服药"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/query2"
+                android:visibility="gone"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="match_parent"
+                android:background="@color/purple_500"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="清单"
                 android:textColor="@color/white" />
 
             <TextView

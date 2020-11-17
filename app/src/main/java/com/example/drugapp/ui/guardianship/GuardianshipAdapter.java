@@ -28,6 +28,8 @@ public class GuardianshipAdapter extends RecyclerView.Adapter<GuardianshipAdapte
 
         void Query(UserInfo userInfo);
 
+        void Query2(UserInfo userInfo);
+
         void CallPhone(UserInfo userInfo);
     }
 
@@ -91,6 +93,14 @@ public class GuardianshipAdapter extends RecyclerView.Adapter<GuardianshipAdapte
                     }
                 }
             });
+            holder.query2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (guardClick != null) {
+                        guardClick.Query2(list.get(position));
+                    }
+                }
+            });
             holder.callphone.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -103,6 +113,7 @@ public class GuardianshipAdapter extends RecyclerView.Adapter<GuardianshipAdapte
                 holder.delect.setVisibility(View.VISIBLE);
             } else {
                 holder.query.setVisibility(View.VISIBLE);
+                holder.query2.setVisibility(View.VISIBLE);
                 holder.callphone.setVisibility(View.VISIBLE);
             }
         }
@@ -118,6 +129,7 @@ public class GuardianshipAdapter extends RecyclerView.Adapter<GuardianshipAdapte
         private TextView add;
         private TextView delect;
         private TextView query;
+        private TextView query2;
         private TextView callphone;
         private RoundTextView image;
         private TextView account;
@@ -127,6 +139,7 @@ public class GuardianshipAdapter extends RecyclerView.Adapter<GuardianshipAdapte
             super(itemView);
             delect = (TextView) itemView.findViewById(R.id.delect);
             query = (TextView) itemView.findViewById(R.id.query);
+            query2 = (TextView) itemView.findViewById(R.id.query2);
             callphone = (TextView) itemView.findViewById(R.id.callphone);
             image = (RoundTextView) itemView.findViewById(R.id.image);
             account = (TextView) itemView.findViewById(R.id.account);
