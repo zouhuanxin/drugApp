@@ -53,17 +53,6 @@
                 android:layout_height="@dimen/dp_40">
             </TextView>
 
-            <TextView
-                android:id="@+id/remindtime"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_40"
-                android:layout_marginTop="@dimen/dp_10"
-                android:background="#f7f7f7"
-                android:gravity="center|left"
-                android:hint="提醒服药时间"
-                android:padding="@dimen/dp_5"
-                android:textSize="@dimen/sp_14"></TextView>
-
             <com.kproduce.roundcorners.RoundImageView
                 android:id="@+id/addimage"
                 android:src="@mipmap/addimage"

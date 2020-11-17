@@ -2,37 +2,44 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.drugapp">
 
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".model.MyApplication"
-        android:requestLegacyExternalStorage="true"
-        android:networkSecurityConfig="@xml/network_config"
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DrugApp">
-        <activity android:name=".ui.login.LoginActivity"></activity>
-        <activity android:name=".ui.login.RegisterActivity"></activity>
-        <activity android:name=".ui.drug.AddDrugActivity"></activity>
-        <activity android:name=".ui.drug.UpdateDrugActivity"></activity>
-        <activity android:name=".ui.guardianship.AddGuardianshipActivity"></activity>
-        <activity android:name=".ui.guardianship.QueryGuardianshipActivity"></activity>
-        <activity android:name=".ui.person.UpdatePassActivity"></activity>
-        <activity android:name=".ui.person.UpdateUsernameActivity"></activity>
-        <activity android:name=".ui.person.UpdateEmailActivity"></activity>
+        android:theme="@style/Theme.DrugApp"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.durglist.DruglistDetailsActivity"></activity>
+        <activity android:name=".ui.durglist.AddDruglist1Activity" />
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.login.RegisterActivity" />
+        <activity android:name=".ui.drug.AddDrugActivity" />
+        <activity android:name=".ui.drug.UpdateDrugActivity" />
+        <activity android:name=".ui.guardianship.AddGuardianshipActivity" />
+        <activity android:name=".ui.guardianship.QueryGuardianshipActivity" />
+        <activity android:name=".ui.person.UpdatePassActivity" />
+        <activity android:name=".ui.person.UpdateUsernameActivity" />
+        <activity android:name=".ui.person.UpdateEmailActivity" />
+        <activity android:name=".ui.durglist.UpdateDruglist1Activity" />
+        <activity android:name=".ui.durglist.AddDruglistDetailsActivity" />
+        <activity android:name=".ui.durglist.UpdateDruglistDetailsActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,8 +50,7 @@
 
         <provider
             android:name="cn.bmob.v3.util.BmobContentProvider"
-            android:authorities="com.example.drugapp.BmobContentProvider">
-        </provider>
+            android:authorities="com.example.drugapp.BmobContentProvider" />
     </application>
 
 </manifest>

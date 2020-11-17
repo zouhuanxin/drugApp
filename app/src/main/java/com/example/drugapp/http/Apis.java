@@ -16,4 +16,12 @@ public class Apis {
     public static final String updatePass = "/updatePass";
     public static final String updateUsername = "/updateUsername";
     public static final String updateEmail = "/updateEmail";
+    public static final String getByAccountDruglist1 = "/getByAccountDruglist1"; //account
+    public static final String getByIdDruglist2 = "/getByIdDruglist2"; //id
+    public static final String deleteByIdDruglist1 = "/deleteByIdDruglist1"; //id
+    public static final String deleteByIdDruglist2 = "/deleteByIdDruglist2"; //id
+    public static final String addDruglist1 = "/addDruglist1"; //id name account
+    public static final String addDruglist2 = "/addDruglist2"; //id2 drugimage drugname drugdesc drugcreatedtime
+    public static final String updateDruglist1 = "/updateDruglist1";
+    public static final String updateDruglist2 = "/updateDruglist2";
 }

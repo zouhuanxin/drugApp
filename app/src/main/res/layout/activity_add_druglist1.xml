@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="添加服药清单"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/sp_15"
+        android:background="@color/purple_500"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50">
+    </TextView>
+
+    <EditText
+        android:id="@+id/input"
+        android:background="#ffffff"
+        android:hint="清单名称"
+        android:textSize="@dimen/sp_14"
+        android:gravity="center|left"
+        android:padding="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50">
+    </EditText>
+
+    <View
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:background="#cccccc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1">
+    </View>
+
+    <com.kproduce.roundcorners.RoundButton
+        android:id="@+id/submit"
+        app:rRadius="@dimen/dp_5"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/sp_15"
+        android:background="@color/purple_500"
+        android:text="添加"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_45">
+    </com.kproduce.roundcorners.RoundButton>
+
+</LinearLayout>

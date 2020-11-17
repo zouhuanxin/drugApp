@@ -57,6 +57,30 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/druglist"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/druglist_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@mipmap/list1">
+        </ImageView>
+        <TextView
+            android:id="@+id/druglist_text"
+            android:text="清单"
+            android:textSize="@dimen/sp_13"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_20">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/person"
         android:layout_width="0dp"
         android:layout_weight="1"

@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <TextView
+            <EditText
                 android:id="@+id/name"
                 android:hint="药物名称"
                 android:gravity="center|left"
@@ -29,7 +29,7 @@
                 android:background="#f7f7f7"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40">
-            </TextView>
+            </EditText>
             <EditText
                 android:id="@+id/desc"
                 android:layout_marginTop="@dimen/dp_10"
@@ -52,18 +52,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40">
             </TextView>
-
-            <TextView
-                android:id="@+id/remindtime"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_40"
-                android:layout_marginTop="@dimen/dp_10"
-                android:background="#f7f7f7"
-                android:gravity="center|left"
-                android:hint="提醒服药时间"
-                android:padding="@dimen/dp_5"
-                android:textSize="@dimen/sp_14"></TextView>
-
             <com.kproduce.roundcorners.RoundImageView
                 android:id="@+id/addimage"
                 android:src="@mipmap/addimage"
@@ -76,7 +64,7 @@
                 android:layout_margin="@dimen/dp_20"
                 android:layout_gravity="center"
                 app:rRadius="@dimen/dp_10"
-                android:text="修改"
+                android:text="添加"
                 android:textColor="#ffffff"
                 android:textSize="@dimen/sp_13"
                 android:gravity="center"
@@ -86,6 +74,5 @@
             </com.kproduce.roundcorners.RoundButton>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 
 </LinearLayout>
