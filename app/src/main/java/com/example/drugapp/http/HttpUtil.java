@@ -8,8 +8,8 @@ import okhttp3.*;
 public class HttpUtil {
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
-    private String ip = "http://192.168.1.105:8085";
-    //private String ip = "http://123.57.45.169:8084";
+    //private String ip = "http://192.168.1.105:8085";
+    private String ip = "http://123.57.45.169:8084";
 
     private int overtime = 10;
 

@@ -42,7 +42,6 @@ public class DruglistDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_druglist_details);
         initView();
-        reqData();
     }
 
     @Override

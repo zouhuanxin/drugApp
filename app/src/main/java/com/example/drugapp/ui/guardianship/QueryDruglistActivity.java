@@ -33,9 +33,8 @@ import okhttp3.Call;
 public class QueryDruglistActivity extends AppCompatActivity {
 
     private List<Druglist1> druglist1s = new ArrayList<>();
-    private List<Druglist2> druglist2s = new ArrayList<>();
     private List<String> list = new ArrayList<>();
-    private TextView content;
+    private TextView bodytext;
     private String str;
 
     @Override
@@ -47,7 +46,7 @@ public class QueryDruglistActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        content = (TextView) findViewById(R.id.content);
+        bodytext = (TextView) findViewById(R.id.bodytext);
     }
 
     private void initData() {
@@ -101,20 +100,19 @@ public class QueryDruglistActivity extends AppCompatActivity {
                 JSONObject rep = new JSONObject(res);
                 if (rep.getInt("code") == 200) {
                     str = str.trim() + "\n⭕️ "+druglist1s.get(index).getName() + "\n        ";
-                    druglist2s.clear();
                     JSONArray array = rep.getJSONArray("data");
                     for (int i = 0; i < array.length(); i++) {
                         Druglist2 druglist2 = new Druglist2();
-                        druglist2.setId(array.getJSONObject(i).getInt("id"));
-                        druglist2.setDrugimage(array.getJSONObject(i).getString("drugimage"));
                         druglist2.setDrugname(array.getJSONObject(i).getString("drugname"));
-                        druglist2.setDrugdesc(array.getJSONObject(i).getString("drugdesc"));
-                        druglist2.setDrugcreatedtime(array.getJSONObject(i).getString("drugcreatedtime"));
-                        druglist2s.add(druglist2);
                         str = str + "🌟 "+druglist2.getDrugname()+"\n        ";
                     }
                     if (index == druglist1s.size() -1){
-                        content.setText(str);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                bodytext.setText(str);
+                            }
+                        });
                         return;
                     }
                     int i = index + 1;

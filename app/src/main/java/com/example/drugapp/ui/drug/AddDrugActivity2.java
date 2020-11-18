@@ -154,23 +154,28 @@ public class AddDrugActivity2 extends AppCompatActivity implements View.OnClickL
     }
 
     private void initSpinner1() {
-        List<String> list = new ArrayList<String>();
-        for (int i = 0; i < druglist1s.size(); i++) {
-            list.add(druglist1s.get(i).getName());
-        }
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapter);
-        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        runOnUiThread(new Runnable() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                clickDruglist1 = druglist1s.get(position);
-                reqlist2(String.valueOf(clickDruglist1.getId()));
-            }
+            public void run() {
+                List<String> list = new ArrayList<String>();
+                for (int i = 0; i < druglist1s.size(); i++) {
+                    list.add(druglist1s.get(i).getName());
+                }
+                ArrayAdapter adapter = new ArrayAdapter<String>(AddDrugActivity2.this, android.R.layout.simple_spinner_item, list);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner1.setAdapter(adapter);
+                spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        clickDruglist1 = druglist1s.get(position);
+                        reqlist2(String.valueOf(clickDruglist1.getId()));
+                    }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
 
+                    }
+                });
             }
         });
     }

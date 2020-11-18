@@ -33,7 +33,6 @@ public class DruglistFragment extends BaseFragment {
     @Override
     protected void init() {
         initView();
-        reqData();
     }
 
     @Override
