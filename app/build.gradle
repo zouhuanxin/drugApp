@@ -35,6 +35,11 @@ android {
         abortOnError false
     }
 
+    packagingOptions {
+        exclude 'classes.dex'
+        exclude '**.**'
+    }
+
 }
 
 dependencies {
