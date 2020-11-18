@@ -35,10 +35,10 @@ android {
         abortOnError false
     }
 
-    packagingOptions {
-        exclude 'classes.dex'
-        exclude '**.**'
-    }
+//    packagingOptions {
+//        exclude 'classes.dex'
+//        exclude '**.**'
+//    }
 
 }
 
